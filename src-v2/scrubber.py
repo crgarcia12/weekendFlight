@@ -111,9 +111,9 @@ def scrape_google_flights(parser):
 
 
 def run(playwright):
-    airports = ['ZRH', 'MXP']#, 'MAD', 'BCN', 'LHR', 'CDG', 'FRA', 'AMS', 'FCO', 'DUB', 'MUC', 'BRU', 'BUD', 'PRG']
-    departure_dates = ['12/28/2023']#,'12/29/2023','12/30/2023','12/31/2023','1/1/2024']
-    return_dates = ['1/16/2024']#,'1/17/2024','1/18/2024']
+    airports = ['ZRH', 'MXP', 'MAD', 'BCN', 'LHR', 'CDG', 'FRA', 'AMS', 'FCO', 'DUB', 'MUC', 'BRU', 'BUD', 'PRG']
+    departure_dates = ['12/28/2023','12/29/2023','12/30/2023','12/31/2023','1/1/2024']
+    return_dates = ['1/16/2024','1/17/2024','1/18/2024']
 
     to_place = 'HAV' 
 
@@ -123,10 +123,15 @@ def run(playwright):
     for from_place in airports:
         for departure_date in departure_dates:
             for return_date in return_dates:
-                parser = get_page(page, playwright, from_place, to_place, departure_date, return_date)
-                google_flights_results = scrape_google_flights(parser)
-                print(json.dumps(google_flights_results, indent=2, ensure_ascii=False))
-                f.write(json.dumps(google_flights_results, indent=2, ensure_ascii=False))
+                try:
+                    parser = get_page(page, playwright, from_place, to_place, departure_date, return_date)
+                    google_flights_results = scrape_google_flights(parser)
+                    print(json.dumps(google_flights_results, indent=2, ensure_ascii=False))
+                    f.write(json.dumps(google_flights_results, indent=2, ensure_ascii=False))
+                except Exception as e:
+                    print(f'Error processing {from_place} - {to_place} - {departure_date} - {return_date}: {e}')
+                    print(e)
+
                 time.sleep(5)
     f.close()
     page.close()
