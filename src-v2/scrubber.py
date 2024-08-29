@@ -14,41 +14,13 @@ import json, time
 import asyncio
 
 
-
-
-# html_content = '''
-# <span aria-hidden="true" class="PTuQse sSHqwe tPgKwe ogfYpf"><div class="QylvBf">
-# <span jsaction="wGOFk:pCNdcd;AHEEwb:QsRKXb;DJL8Fd:pCNdcd;z0rlDb:QsRKXb" jsshadow="" jscontroller="E0AZj" data-position="2" data-caret-position="2" data-max-width="400px"><span jsslot="">
-# <span jscontroller="cNtv4b" jsaction="focus:AHmuwe; blur:O22p3e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchend:yfqBxc" aria-describedby="gEvJbfc162" tabindex="-1" aria-label="">ZRH</span>
-# </span>
-# <div jsname="bN97Pc" id="gEvJbfc162" style="display: none;">
-# <span class="eoY5cb">Zurich Airport</span></div></span></div>–<div class="QylvBf">
-# <span jsaction="wGOFk:pCNdcd;AHEEwb:QsRKXb;DJL8Fd:pCNdcd;z0rlDb:QsRKXb" jsshadow="" jscontroller="E0AZj" data-position="2" data-caret-position="2" data-max-width="400px">
-# <span jsslot="">
-# <span jscontroller="cNtv4b" jsaction="focus:AHmuwe; blur:O22p3e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchend:yfqBxc" aria-describedby="gEvJbfc163" tabindex="-1" aria-label="">GIG</span>
-# </span><div jsname="bN97Pc" id="gEvJbfc163" style="display: none;">
-# <span class="eoY5cb">RIOgaleão - Aeroporto Internacional Tom Jobim</span></div></span></div></span>
-# '''
-
-# # Initialize the parser
-# parser = LexborHTMLParser(html_content)
-
-# # Extract airport codes
-# airport_codes = [node.text() for node in parser.root.css('span[jscontroller="cNtv4b"]')]
-
-
-# print(airport_codes)
-
-
-
-
-
-
-def json_to_csv(file_descriptor, json_data, header = True):
-    if header:
+def json_to_csv(file_descriptor, json_data, header_only = False):
+    if header_only:
         file_descriptor.write(
             'category,flight_class,departure_date,return_date,price,price_type,departure_time,arrival_time,company,duration,stops,emissions,emission_comparison,departure_airport,arrival_airport\n'
         )
+        return
+    
     for flight in json_data:
     # flight = json_data
         file_descriptor.write(
@@ -56,7 +28,7 @@ def json_to_csv(file_descriptor, json_data, header = True):
             str(flight['flight_class']).replace(',','') + ',' +
             str(flight['departure_date']).replace(',','') + ',' +
             str(flight['return_date']).replace(',','')+',' +
-            str(flight['price']).replace(',','').replace('CHF ', '') +',' +
+            str(flight['price']).replace(',','').replace('CHF', '').strip() + ',' +
             str(flight['price_type']).replace(',','')+',' +
             str(flight['departure_time']).replace(',','') + ',' +
             str(flight['arrival_time']).replace(',','')+',' +
@@ -79,16 +51,17 @@ async def get_page_async(page, from_place, to_place, flight_class, departure_dat
     else:
         print('Accept terms button not found')
 
-    print('Select class')
-    if flight_class != 'Economy':
-        await page.getByLabel('Economy').locator('div').click()
-        await page.getByRole('option', name=flight_class).click()
-
     print('Setting passengers')
     await page.get_by_label('1 passenger, change number of').click()
     await page.get_by_label('Add adult').click()
-    await page.get_by_label('Add child').click()
+    #await page.get_by_label('Add child').click()
     await page.get_by_role('button', name ='Done').click()
+
+    print('Select class')
+    if flight_class != 'Economy':
+        await page.get_by_label('Economy').locator('div').click()
+        await page.get_by_role('option', name=flight_class).click()
+        await asyncio.sleep(0.5)
 
     print('from_place:', from_place)
     await page.get_by_label('Where from?').click()
@@ -119,7 +92,7 @@ async def get_page_async(page, from_place, to_place, flight_class, departure_dat
     #await page.get_by_role('textbox', name='Return').press('Enter')
     #await page.get_by_label('Done').click()
     await asyncio.sleep(1)
-    
+
     #await page.get_by_label('Explore destinations').click()
     await page.get_by_label('Search', exact = True).click()
 
@@ -266,13 +239,14 @@ def scrape_google_flights(parser, flight_class, departure_date, return_date):
     return data
 
 async def run_async(pw):
-    airports = ['ZRH', 'MXP']
+    airports = ['ARN', 'OSL', 'CPH']
     departure_dates = ['6/21/2025']
     return_dates = ['7/21/2025']
-    flight_class = 'Economy'
+    flight_class = 'Business'
     arrival_airports = ['GIG', 'GRU'] 
 
     with open('outputs.csv', 'w', encoding="utf-8") as csv_file:
+        json_to_csv(json_data='', file_descriptor=csv_file, header_only=True)
         with open("outputs.json", "w", encoding="utf-8") as json_file:
             try:
                 browser = await pw.chromium.launch(headless=False)

@@ -1,0 +1,48 @@
+category,flight_class,departure_date,return_date,price,price_type,departure_time,arrival_time,company,duration,stops,emissions,emission_comparison,departure_airport,arrival_airport
+best_departing_flights,Business,6/21/2025,7/21/2025,4678,round trip,9:35 AM,7:45 PM,KLM,15 hr 10 min,1 stop,4945 kg CO2e,-14% emissions,ARN,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,5269,round trip,2:05 PM,5:25 AM+1,Tap Air Portugal,20 hr 20 min,1 stop,4580 kg CO2e,-21% emissions,ARN,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,8981,round trip,6:55 PM,5:35 AM+1,Lufthansa,15 hr 40 min,1 stop,7664 kg CO2e,+33% emissions,ARN,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,9112,round trip,6:00 AM,7:35 PM,Air France,18 hr 35 min,1 stop,6263 kg CO2e,+9% emissions,ARN,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,9301,round trip,7:25 AM,7:35 PM,Scandinavian Airlines Air France,17 hr 10 min,1 stop,6099 kg CO2e,+6% emissions,ARN,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,5739,round trip,6:15 AM,5:35 PM,Iberia,16 hr 20 min,1 stop,4389 kg CO2e,-8% emissions,ARN,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,6675,round trip,6:00 AM,4:55 PM,Air France,15 hr 55 min,1 stop,6850 kg CO2e,+43% emissions,ARN,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,6675,round trip,9:35 AM,7:50 PM,KLM,15 hr 15 min,1 stop,6787 kg CO2e,+42% emissions,ARN,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,5252,round trip,2:50 PM,5:50 AM+1,Iberia,20 hr,1 stop,5571 kg CO2e,+16% emissions,ARN,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6324,round trip,8:25 AM,6:00 AM+1,British Airways,26 hr 35 min,1 stop,4489 kg CO2e,-6% emissions,ARN,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6419,round trip,4:40 PM,4:55 AM+1,Lufthansa,17 hr 15 min,1 stop,9392 kg CO2e,+96% emissions,ARN,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6675,round trip,7:20 PM,6:15 AM+1,Air France,15 hr 55 min,1 stop,4687 kg CO2e,Avg emissions,ARN,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6769,round trip,2:05 PM,5:45 AM+1,Tap Air Portugal,20 hr 40 min,1 stop,4681 kg CO2e,Avg emissions,ARN,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,4605,round trip,12:50 PM,5:25 AM+1,Tap Air Portugal,21 hr 35 min,1 stop,4650 kg CO2e,-23% emissions,OSL,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,5004,round trip,9:20 AM,7:45 PM,KLMOperated by KLM Cityhopper,15 hr 25 min,1 stop,4930 kg CO2e,-18% emissions,OSL,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,5034,round trip,6:30 AM,9:00 PM,Air France Gol,19 hr 30 min,2 stops,4371 kg CO2e,-27% emissions,OSL,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,5188,round trip,8:00 AM,7:45 PM,Scandinavian Airlines KLM,16 hr 45 min,1 stop,4759 kg CO2e,-21% emissions,OSL,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,5913,round trip,6:50 PM,5:35 AM+1,Lufthansa,15 hr 45 min,1 stop,7649 kg CO2e,+27% emissions,OSL,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,6346,round trip,5:05 PM,5:35 AM+1,British Airways,17 hr 30 min,1 stop,6969 kg CO2e,+16% emissions,OSL,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,9200,round trip,6:30 AM,7:35 PM,Air France,18 hr 5 min,1 stop,6226 kg CO2e,Avg emissions,OSL,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,5171,round trip,6:50 PM,4:55 AM+1,Lufthansa,15 hr 5 min,1 stop,9377 kg CO2e,+97% emissions,OSL,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,5262,round trip,7:00 PM,5:50 AM+1,Iberia,15 hr 50 min,1 stop,5533 kg CO2e,+16% emissions,OSL,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,5559,round trip,8:00 AM,7:50 PM,Scandinavian Airlines KLM,16 hr 50 min,1 stop,6601 kg CO2e,+39% emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6181,round trip,6:30 AM,7:50 PM,KLMOperated by KLM Cityhopper,18 hr 20 min,1 stop,6709 kg CO2e,+41% emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6220,round trip,5:05 PM,6:00 AM+1,British Airways,17 hr 55 min,1 stop,4505 kg CO2e,Avg emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,7392,round trip,9:20 AM,7:50 PM,KLMOperated by KLM Cityhopper,15 hr 30 min,1 stop,6772 kg CO2e,+42% emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,7392,round trip,4:50 PM,6:15 AM+1,Air France,18 hr 25 min,1 stop,4650 kg CO2e,Avg emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,9559,round trip,2:00 PM,5:25 AM+1,SWISSOperated by Helvetic,20 hr 25 min,1 stop,6489 kg CO2e,+36% emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,11926,round trip,8:15 AM,5:50 AM+1,British Airways Iberia,26 hr 35 min,2 stops,5706 kg CO2e,+20% emissions,OSL,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,13508,round trip,5:05 PM,5:05 AM+1,British Airways LATAMFinnairOperated by Latam Airlines Brasil for LA,17 hr,1 stop,6168 kg CO2e,+30% emissions,OSL,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,4751,round trip,9:25 AM,7:45 PM,KLM,15 hr 20 min,1 stop,4792 kg CO2e,-20% emissions,CPH,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,4939,round trip,8:15 AM,7:45 PM,Scandinavian Airlines KLMOperated by Sas Link for Scandinavian Airlines,16 hr 30 min,1 stop,4777 kg CO2e,-20% emissions,CPH,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,6111,round trip,5:40 PM,5:25 AM+1,Tap Air Portugal,16 hr 45 min,1 stop,4484 kg CO2e,-25% emissions,CPH,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,6111,round trip,6:00 AM,5:40 PM,Tap Air Portugal,16 hr 40 min,1 stop,4587 kg CO2e,-23% emissions,CPH,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,6467,round trip,10:45 AM,5:35 AM+1,British Airways,23 hr 50 min,1 stop,6979 kg CO2e,+17% emissions,CPH,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,7183,round trip,7:10 PM,5:35 AM+1,Lufthansa,15 hr 25 min,1 stop,7556 kg CO2e,+26% emissions,CPH,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,8149,round trip,9:45 AM,7:35 PM,Air France,14 hr 50 min,1 stop,6083 kg CO2e,Avg emissions,CPH,GIG
+other_departing_flights,Business,6/21/2025,7/21/2025,8337,round trip,8:30 AM,7:35 PM,Scandinavian Airlines Air FranceOperated by Cityjet for Scandinavian Airlines,16 hr 5 min,1 stop,6057 kg CO2e,Avg emissions,CPH,GIG
+best_departing_flights,Business,6/21/2025,7/21/2025,4939,round trip,7:10 PM,4:55 AM+1,Lufthansa,14 hr 45 min,1 stop,9284 kg CO2e,+97% emissions,CPH,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,5229,round trip,7:55 PM,5:25 AM+1,SWISS,14 hr 30 min,1 stop,6360 kg CO2e,+35% emissions,CPH,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,5297,round trip,7:50 PM,5:50 AM+1,IberiaOperated by Iberia Express,15 hr,1 stop,5453 kg CO2e,+16% emissions,CPH,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,5674,round trip,6:00 AM,6:35 PM,Tap Air Portugal,17 hr 35 min,1 stop,4688 kg CO2e,Avg emissions,CPH,GRU
+best_departing_flights,Business,6/21/2025,7/21/2025,6147,round trip,6:20 AM,4:55 PM,Air France,15 hr 35 min,1 stop,6671 kg CO2e,+42% emissions,CPH,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6147,round trip,3:50 PM,6:15 AM+1,Air France,19 hr 25 min,1 stop,4507 kg CO2e,Avg emissions,CPH,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6334,round trip,7:40 PM,6:00 AM+1,British Airways,15 hr 20 min,1 stop,4515 kg CO2e,Avg emissions,CPH,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,6335,round trip,8:15 AM,7:50 PM,Scandinavian Airlines KLMOperated by Sas Link for Scandinavian Airlines,16 hr 35 min,1 stop,6619 kg CO2e,+41% emissions,CPH,GRU
+other_departing_flights,Business,6/21/2025,7/21/2025,7644,round trip,5:40 PM,5:45 AM+1,Tap Air Portugal,17 hr 5 min,1 stop,4585 kg CO2e,Avg emissions,CPH,GRU
